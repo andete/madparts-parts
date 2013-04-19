@@ -40,7 +40,7 @@ footprint = () ->
   silk3 = new Disc
   silk3.x = -half
   silk3.y = out_y+e/2
-  silk3.r = e/4
+  silk3.r = e/8
 
   sq = silk_square 5.2/2, line_width
 

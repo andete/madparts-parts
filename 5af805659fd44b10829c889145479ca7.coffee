@@ -1,4 +1,4 @@
-#format 1.0
+#format 1.1
 #name PIN 1X2_SMD
 #id 5af805659fd44b10829c889145479ca7
 #parent 708e13cc5f4e43f7833af53070ba5078

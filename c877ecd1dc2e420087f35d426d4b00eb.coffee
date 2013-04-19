@@ -1,4 +1,4 @@
-#format 1.0
+#format 1.1
 #name MOLEX_53398-1071
 #id c877ecd1dc2e420087f35d426d4b00eb
 #parent 0467987b220e4ad3a8cc7250d4ac4848
