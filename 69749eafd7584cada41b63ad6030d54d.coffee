@@ -27,7 +27,7 @@ footprint = () ->
   r1 = new Rect
   r1.dx = (8-2)/2
   r1.dy = 2.6
-  r1.type = 'keepout'
+  r1.type = 'restrict'
   r1.x = 1+r1.dx/2
 
   r2 = clone r1
