@@ -2,7 +2,7 @@
 #name 0603
 #id 10644a0b9a3a4f2a8a8b0add2ba7ce21
 #parent dc93599ddebd4bf8a02e4beef8a09b8b
-#desc Capacitor
+#desc Generic 0603 footprint
 
 footprint = () ->
   smd = new Smd
