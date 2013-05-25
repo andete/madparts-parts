@@ -38,10 +38,11 @@ footprint = () ->
   r.dx = d/2
   r.dy = d
 
-  restrict = new Rect
-  restrict.type = 'restrict'
-  restrict.dx = 2*d
-  restrict.dy = 1*d
+  #restrict = new Rect
+  #restrict.type = 'restrict'
+  #restrict.dx = 3*d
+  #restrict.dy = 1*d
+  #restrict.x = 0.5*d
  
 
-  combine [name,value, units, silks, keepouts, r, restrict]
+  combine [name,value, units, silks, keepouts, r]
