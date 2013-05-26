@@ -33,5 +33,5 @@ footprint = () ->
   silk = lines w, [[-x,y1],[x,y1],[x,y2], [-x,y2], [-x,y1]]
 
   name = new Name 3.7
-
-  combine [name, docu, pada, padb, padc, silk]
+  value = new Value -3
+  combine [name, value, docu, pada, padb, padc, silk]
