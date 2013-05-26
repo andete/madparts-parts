@@ -1,4 +1,4 @@
-#format 1.1
+#format 1.2
 #name 0603
 #id 10644a0b9a3a4f2a8a8b0add2ba7ce21
 #parent dc93599ddebd4bf8a02e4beef8a09b8b
@@ -13,29 +13,8 @@ footprint = () ->
   name = new Name 1.4
   value = new Value -1.4
 
-  kx = 1.6
-  ky = 0.75
-  keepout1 = new Line 0.1
-  keepout1.x1 = -kx
-  keepout1.y1 = ky
-  keepout1.x2 = kx
-  keepout1.y2 = ky
-  keepout1.type = 'keepout'
-  keepout2 = new Line 0.1
-  keepout2.x1 = kx
-  keepout2.y1 = ky
-  keepout2.x2 = kx
-  keepout2.y2 = -ky
-  keepout2.type = 'keepout'
-  keepout3 = mirror_x clone keepout1
-  keepout4 = mirror_y clone keepout2
-
-  keepout = [keepout1, keepout2, keepout3, keepout4]
-
-  silk = keepout.map ((o) -> 
-    o2 = clone o
-    o2.type = 'silk'
-    o2)
+  keepout = make_rect 3.2, 1.5, 0.1, 'keepout'
+  silk = clone_modl keepout, 'type', 'silk' 
 
   docu1 = new Line 0.1
   docu1.x1 = -0.35
@@ -50,7 +29,6 @@ footprint = () ->
   docu3.x = -0.6
   docu3.type = 'docu'
   docu4 = mirror_y clone docu3
-
   docu4.type = 'docu'
 
   docu = [docu1, docu2, docu3, docu4]
