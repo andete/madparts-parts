@@ -1,8 +1,16 @@
-#format 1.2
+#format 1.1
 #name 0603
 #id 10644a0b9a3a4f2a8a8b0add2ba7ce21
 #parent dc93599ddebd4bf8a02e4beef8a09b8b
 #desc Generic 0603 footprint
+
+make_rect = (dx, dy, line_width, type) ->
+    x2 = dx/2
+    y2 = dy/2
+    l = lines line_width, [[-x2,-y2],[x2,-y2],[x2,y2],[-x2,y2],[-x2,-y2]]
+    l.map ((o) ->
+        o.type = type
+        o)
 
 footprint = () ->
   smd = new Smd

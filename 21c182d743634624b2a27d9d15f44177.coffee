@@ -1,10 +1,19 @@
-#format 1.2
+#format 1.1
 #name TI_LP2954_SO8
 #id 21c182d743634624b2a27d9d15f44177
 #parent 7db0a6816f5a4a5581e92cecab7d7e08
 #desc TI LP2954 LDO VREG
 #desc 100uA quiscent current
 #desc up to 29V
+
+make_rect = (dx, dy, line_width, type) ->
+    x2 = dx/2
+    y2 = dy/2
+    l = lines line_width, [[-x2,-y2],[x2,-y2],[x2,y2],[-x2,y2],[-x2,-y2]]
+    l.map ((o) ->
+        o.type = type
+        o)
+
 footprint = () ->
 
   e = 1.27

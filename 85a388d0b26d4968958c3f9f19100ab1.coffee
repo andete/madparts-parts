@@ -1,4 +1,4 @@
-#format 1.2
+#format 1.1
 #name SMT trimmer Panasonic EVM3Y
 #id 85a388d0b26d4968958c3f9f19100ab1
 #desc TODO

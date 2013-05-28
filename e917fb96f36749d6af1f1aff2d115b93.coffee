@@ -1,8 +1,16 @@
-#format 1.2
+#format 1.1
 #name SOT-23A
 #id e917fb96f36749d6af1f1aff2d115b93
 #parent 0094a06387e74d2f98a6fe8d01b761ae
 #desc generic SOT-23A footprint
+
+make_rect = (dx, dy, line_width, type) ->
+    x2 = dx/2
+    y2 = dy/2
+    l = lines line_width, [[-x2,-y2],[x2,-y2],[x2,y2],[-x2,y2],[-x2,-y2]]
+    l.map ((o) ->
+        o.type = type
+        o)
 
 footprint = () ->
   
