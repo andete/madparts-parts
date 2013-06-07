@@ -22,7 +22,7 @@ footprint = () ->
   value = new Value -1.4
 
   keepout = make_rect 3.2, 1.5, 0.1, 'keepout'
-  silk = clone_modl keepout, 'type', 'silk' 
+  silk = make_rect 3.5-0.05, 2-0.05, 0.1, 'silk'
 
   docu1 = new Line 0.1
   docu1.x1 = -0.35
