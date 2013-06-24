@@ -38,7 +38,7 @@ footprint = () ->
   # GND break connection
   padb = new RoundPad bc_r, slotbc
   padb.x = -dx/2 + 10.7
-  padb.y = 4.7
+  padb.y = -4.7
   padb.name = 'B'
 
   name = new Name 5.5
