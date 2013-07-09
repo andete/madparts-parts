@@ -16,7 +16,7 @@ footprint = () ->
   n3 = 6
   pvadj = tdy/2-((n1-1)/2)*pbt - (tdy-2-9*pbt)
 
-  r = make_rect tdx, tdy, 0.1, 'docu'
+  r = make_rect tdx, tdy, 0.1, 'silk'
 
   p = new Smd 
   p.dx = pdx
@@ -39,4 +39,11 @@ footprint = () ->
 
   name = new Name (tdy/2+1)
 
-  combine [r, l1, l2,l3, name]
+  k = new Rect
+  k.type = 'restrict'
+  k.x = 7
+  k.y = tdy/2-2.5
+  k.dx = tdx/2+10
+  k.dy = 5.2
+
+  combine [r, l1, l2,l3, name, k]
