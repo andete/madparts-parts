@@ -36,7 +36,11 @@ footprint = () ->
   docu = make_rect 1.75, 3.05, w, 'docu'
   silk = make_rect 4, 3.5, w, 'silk'
 
+  c = new Circle 0.1
+  c.r = 0.2
+  c.x = -2.3+0.3
+  c.y = 1.75
 
   name = new Name 2.6
   value = new Value -2.6
-  combine [name, value, l, docu, silk]
+  combine [name, value, l, docu, silk, c]
