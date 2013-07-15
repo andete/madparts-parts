@@ -1,4 +1,5 @@
 PATH:=$(PATH):/home/joost/prj/madparts
 
 all:
-	madparts ls > ls.txt
+	cat README.md.in > README.md
+	madparts ls >> README.md
