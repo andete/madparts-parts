@@ -6,6 +6,7 @@ simple repository of parts created with madparts
 listing
 -------
 
+```
 in dev tree
 10644a0b9a3a4f2a8a8b0add2ba7ce21 0603
 d2f4ba1813d740afb47ae52889226c82 0603_S
@@ -42,3 +43,5 @@ c90bae8666f24d5088a2b75809308464 TE polyfuse 1812
 7f9fa9f9194a41278b74e4eaede4d110 Wago 500 Screw Terminal 2 pin
 c82c2e1e5ff5451296bbd438e4f9129d relay TE V23079 THT standard bistable 2 coil
 3c55f908bf8743a9bf1072d471264637 relay aromat DSP2aE-L2-DC5V
+```
+
