@@ -6,14 +6,6 @@
 #desc made slightly smaller
 #desc for more densely populated boards
 
-make_rect = (dx, dy, line_width, type) ->
-    x2 = dx/2
-    y2 = dy/2
-    l = lines line_width, [[-x2,-y2],[x2,-y2],[x2,y2],[-x2,y2],[-x2,-y2]]
-    l.map ((o) ->
-        o.type = type
-        o)
-
 footprint = () ->
   smd = new Smd
   smd.dx = 0.7
