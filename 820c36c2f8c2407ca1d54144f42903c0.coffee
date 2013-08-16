@@ -2,7 +2,8 @@
 #name Crystal 2-pad 5x3.2mm
 #id 820c36c2f8c2407ca1d54144f42903c0
 #parent a9b4ccf424df467ea7d99b6e1ea896de
-#desc example device: Interquip SMAQ-5032A 
+#desc example device: Interquip SMAQ-5032A
+#desc 2-pad crystal 5x3.2mm
 
 make_rect = (dx, dy, line_width, type) ->
     x2 = dx/2

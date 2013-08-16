@@ -2,8 +2,8 @@
 #name USB-A-H
 #id 467f12c6796f4c478d3a116783842507
 #desc USB Series A Hole Mounted
-#desc works for both the PTH
-#desc and the SMT variant
+#desc works for both the PTH and the SMT variant
+#desc farnell 1696546
 
 footprint = () ->
   pad1 = new RoundPad 0.94, 0.9

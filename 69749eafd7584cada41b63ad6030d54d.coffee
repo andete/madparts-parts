@@ -2,6 +2,9 @@
 #name BUTTON ALPS SMD 5.2mm SKQG
 #id 69749eafd7584cada41b63ad6030d54d
 #parent 7db0a6816f5a4a5581e92cecab7d7e08
+#desc 5.2mm SMD button
+#desc ALPS SKQG
+
 footprint = () ->
 
 

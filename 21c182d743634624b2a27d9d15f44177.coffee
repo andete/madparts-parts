@@ -4,6 +4,7 @@
 #parent 7db0a6816f5a4a5581e92cecab7d7e08
 #desc TI LP2954 LDO VREG
 #desc 100uA quiscent current
+#desc adjustable, enable
 #desc up to 29V
 
 make_rect = (dx, dy, line_width, type) ->

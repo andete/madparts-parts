@@ -5,6 +5,7 @@
 #desc Generic 0603 footprint
 #desc made slightly smaller
 #desc for more densely populated boards
+#desc used for resistor and capacitor
 
 footprint = () ->
   smd = new Smd

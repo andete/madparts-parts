@@ -3,6 +3,7 @@
 #id e132e1318ef24ac393a217ce31a25f1e
 #parent 10644a0b9a3a4f2a8a8b0add2ba7ce21
 #desc Generic 0805 footprint
+#desc used for resistor and capacitor
 
 make_rect = (dx, dy, line_width, type) ->
     x2 = dx/2
