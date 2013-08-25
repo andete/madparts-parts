@@ -61,8 +61,8 @@ footprint = () ->
   d = [d1, d2, d3]
 
   disc = new Disc 0.2
-  disc.x = -x+0.6
-  disc.y = -y-0.2
+  disc.x = -x
+  disc.y = -y+1
 
   name = new Name 2.6
   value = new Value -2.6
