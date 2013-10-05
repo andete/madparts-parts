@@ -10,7 +10,7 @@ footprint = () ->
 
   e = 0.65
   dx = 1.4
-  dy = 0.41
+  dy = 0.38
   between = 4.8
   half = between/2
   n = 8
@@ -21,7 +21,7 @@ footprint = () ->
   smd.dx = dx
   smd.dy = dy
   smd.ro = 50
-  smd.x = 0.2
+  smd.x = 0.0
 
   r1 = new Rect
   r1.x = 0
@@ -36,7 +36,7 @@ footprint = () ->
   name = new Name (out_y + e*2)
   value = new Value (-name.y)
   docu = make_rect 3.1, 3.1, line_width, 'docu'
-  r = make_rect 6, 3.5, line_width, 'silk'
+  r = make_rect 6.5, 3.5, line_width, 'silk'
 
   tpad = new Smd
   tpad.dx = 1.73
@@ -51,9 +51,9 @@ footprint = () ->
   dot.r = e/2
 
   v1 = new Line 0.1
-  v1.x1 = -3
+  v1.x1 = -3.25
   v1.y1 = 3.5/2-0.5
-  v1.x2 = -2.5
+  v1.x2 = -2.75
   v1.y2 = 3.5/2
 
   combine [name, value, dot, pads, docu, r, v1, tpad]

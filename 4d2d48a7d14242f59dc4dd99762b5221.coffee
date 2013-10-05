@@ -15,8 +15,8 @@ footprint = () ->
   smd1.dy = 1.5
   l = rot_single [smd1], 2, 3.0
   l[0].ro = 50
-  l[0].name = '-'
-  l[1].name = '+'
+  l[0].name = '2'
+  l[1].name = '1'
 
   docu = make_rect 3, 2, w, 'docu'
 
