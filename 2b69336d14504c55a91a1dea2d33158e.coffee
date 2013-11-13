@@ -15,14 +15,14 @@ footprint = () ->
   pdy = 0.86
 
   smd1 = new Smd
-  smd1.dx = 0.6+1.66
+  smd1.dx = 1.66-0.15
   smd1.dy = pdy
-  smd1.x = -(2-(0.6+1.66)/2)
+  smd1.x = -(2-(0.6+1.66)/2)+0.6/2+0.15/2
 
   smd2 = new Smd
-  smd2.dx = 0.64+0.6
+  smd2.dx = 0.64-0.15
   smd2.dy = pdy
-  smd2.x = 2-(0.64+0.6)/2
+  smd2.x = 2-(0.64+0.6)/2-0.6/2-0.15/2
 
   smd3 = new Smd
   smd3.dx = 0.6
@@ -30,7 +30,7 @@ footprint = () ->
   smd3.x = -(2-0.6/2)
   smd4 = mirror_y clone smd3
 
-  l = [smd2,smd1, smd3, smd4]
+  l = [smd2,smd1, smd4, smd3]
 
   name = new Name 1.4
   value = new Value -1.4
@@ -79,7 +79,16 @@ footprint = () ->
   marker = new Line 0.2
   marker.x1 = -ldx/2-0.75
   marker.x2 = -ldx/2-0.75
-  marker.y1 = -0.65
-  marker.y2 = 0.65
+  marker.y1 = -ldy/2-0.1
+  marker.y2 = ldy/2+0.1
 
-  combine [name ,value, l,  docu, keepout, marker, silk]
+  stop = new Rect
+  stop.dx = 1
+  stop.dy = 1
+  stop.x = -1.2
+  stop.type = 'stop'
+
+  stop2 = clone stop
+  stop2.x = 1.3
+
+  combine [name ,value, l,  docu, keepout, marker, silk, stop, stop2]
