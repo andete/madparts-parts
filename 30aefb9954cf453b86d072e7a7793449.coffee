@@ -3,7 +3,7 @@
 #id 30aefb9954cf453b86d072e7a7793449
 #parent e917fb96f36749d6af1f1aff2d115b93
 #desc generic SOT-23A footprint
-#desc larger pads for easuer soldering
+#desc larger pads for easier soldering
 #desc and better thermal connection
 
 # for 1.1 compat
