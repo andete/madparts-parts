@@ -31,9 +31,9 @@ footprint = () ->
 
   pd = new Rect
   pd.type = 'docu'
-  pd.dx = 0.4
-  pd.dy = 0.3
-  pd.x = 0.4/2
+  pd.dx = pdx/2
+  pd.dy = pdy
+  pd.x = pd.dx/2
 
   pads = quad [pad,pd], num_pads, e, size
 
@@ -46,7 +46,7 @@ footprint = () ->
   center_pad = new Smd
   center_pad.dx = cdx
   center_pad.dy = cdy
-  center_pad.name = 25
+  center_pad.name = 0
 
   cpd = new Rect
   cpd.type = 'docu'

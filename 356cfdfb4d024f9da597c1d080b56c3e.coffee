@@ -56,7 +56,10 @@ footprint = () ->
   smd.dy = 0.4
   smd.x = 2+smd.dx/2
 
-  usb_pads = single smd, 5, 0.65
+  # confusingly, the pins are upside 
+  # down in the connector, meaning
+  # the pin order is reversed
+  usb_pads = mirror_x single smd, 5, 0.65
 
   smds= combine [smd1, usb_pads]
 
