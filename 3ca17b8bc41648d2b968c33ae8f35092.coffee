@@ -4,49 +4,52 @@
 #parent 445c062a047247098327493b7730f02a
 #desc Bluegiga BLE113 bluetooth LE module
 
-# WIP!
-
 footprint = () ->
-  tdx = 9.3
-  tdy = 13.05
+  module_dx = 9.15
+  module_dy = 15.74
 
-  pdx = 1.5
-  pdy = 0.6
-  pbt = 1.1
-  pladj = 1.9-((tdx+pdx)/2)
-  n1 = 10
-  n2 = 5
-  n3 = 6
-  pvadj = tdy/2-((n1-1)/2)*pbt - (tdy-2-9*pbt)
+  pad_dx = 2
+  pad_dy = 0.5
 
-  r = make_rect tdx, tdy, 0.1, 'silk'
+  pad_hadj = (5.35+pad_dx)/2
+  pad_between = 0.8
+  n_left = 18
+  n_down = 6
+  n_right = 12
+  lr_pad_from_bottom = 1.45
+  pad_vadj = ((n_left-1)/2)*pad_between # move pad 18 to 0
+  pad_vadj -= module_dy/2                     # move pad 18 down to bottom
+  pad_vadj += lr_pad_from_bottom         # and back up by 1.45
 
-  p = new Smd 
-  p.dx = pdx
-  p.dy = pdy
-  p.ro = 50
+  r1 = make_rect module_dx, module_dy, 0.1, 'docu'
+  r2 = make_rect module_dx+0.2, module_dy+0.2, 0.1, 'silk'
 
-  l1 = single p, n1, pbt
-  l1 = adjust_x l1, pladj
-  l1 = adjust_y l1 , pvadj
+  pad = new Smd 
+  pad.dx = pad_dx
+  pad.dy = pad_dy
+  pad.ro = 100
 
-  l2 = rot_single (rotate90pad clone p), n2, pbt
-  l2 = adjust_y l2, -tdy/2 + 2 - pdx/2
-  l2 = generate_names l2, 10
+  l1 = single pad, n_left, pad_between
+  l1 = adjust_x l1, -pad_hadj
+  l1 = adjust_y l1 , pad_vadj
 
-  l3 = single p, n3, pbt
+  l2 = rot_single (rotate90pad clone pad), n_down, pad_between
+  l2 = adjust_y l2, -module_dy/2+lr_pad_from_bottom-0.55
+  l2 = generate_names l2, n_left
+
+  l3 = single pad, n_right, pad_between
   l3 = reverse l3
-  l3 = generate_names l3, 15
-  l3 = adjust_x l3, -pladj
-  l3 = adjust_y l3, pvadj-2*pbt
+  l3 = generate_names l3, n_left+n_down
+  l3 = adjust_x l3, pad_hadj
+  l3 = adjust_y l3, pad_vadj+(n_right-n_left)/2*pad_between
 
-  name = new Name (tdy/2+1)
+  name = new Name (module_dy/2-1)
 
   k = new Rect
   k.type = 'restrict'
-  k.x = 7
-  k.y = tdy/2-2.5
-  k.dx = tdx/2+10
-  k.dy = 5.2
+  k.dx = module_dx
+  k.dy = module_dy/2-l3[n_right-1].y
+  k.x = -module_dx/2+3.5+k.dx/2
+  k.y = l3[n_right-1].y+pad_dy/2+k.dy/2
 
-  combine [r, l1, l2,l3, name, k]
+  combine [name, r1,r2, l1, l2,l3, k]
