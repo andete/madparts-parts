@@ -1,17 +1,8 @@
-#format 1.1
+#format 1.2
 #name SOT-23-6L
 #id 28bc4baba8cf4350be1102f5bef6c1cf
 #parent 0094a06387e74d2f98a6fe8d01b761ae
 #desc generic SOT-23-6L footprint
-
-# backported from 1.2
-make_rect = (dx, dy, line_width, type) ->
-    x2 = dx/2
-    y2 = dy/2
-    l = lines line_width, [[-x2,-y2],[x2,-y2],[x2,y2],[-x2,y2],[-x2,-y2]]
-    l.map ((o) ->
-        o.type = type
-        o)
 
 footprint = () ->
   
