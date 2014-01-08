@@ -6,7 +6,7 @@ footprint = () ->
 
   dx = 1.5
   dy = 1.5
-  between = 0.2
+  between = 0.4
 
   smd1 = new Smd
   smd1.dx = dx
