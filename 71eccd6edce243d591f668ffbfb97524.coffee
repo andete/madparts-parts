@@ -26,20 +26,20 @@ footprint = () ->
   # power connection
   pada = new RoundPad a_r, slota
   pada.x = -dx/2 + 13.9
-  pada.name = 'P'
+  pada.name = '1'
 
   # GND connection
   slotbc = 2.4 + 0.2
   bc_r = (slotbc+1.2)/2
   padc = new RoundPad bc_r, slotbc
   padc.x = -dx/2 + 7.7
-  padc.name = 'G'
+  padc.name = '2'
 
   # GND break connection
   padb = new RoundPad bc_r, slotbc
   padb.x = -dx/2 + 10.7
   padb.y = -4.7
-  padb.name = 'B'
+  padb.name = '3'
 
   name = new Name 5.5
   name.x = -1

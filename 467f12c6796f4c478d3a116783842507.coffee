@@ -35,10 +35,18 @@ footprint = () ->
   pad6.y = 5.8
   pad6.rot = 270
 
-  h1 = new Hole 1.1
-  h1.x = -0.1
-  h1.y = 2.25
-  h2 = mirror_x clone h1
+  #h1 = new Hole 1.1
+  #h1.x = -0.1
+  #h1.y = 2.25
+  #h2 = mirror_x clone h1
+
+  # replace hole by pads, works easier in kicad
+  pad7 = new RoundPad 1.4/2,1.1
+  pad7.x = -0.1
+  pad7.y = 2.25
+  pad7.name = 'NC1'
+  pad8 = mirror_x clone pad7
+  pad8.name = 'NC2'
 
   silk1 = new Line 0.2
   silk1.x1 = -3.0
@@ -128,4 +136,4 @@ footprint = () ->
   docu11.x2 = -13.5
   docu11.y2 = -1.9
   docu11.type = 'docu'
-  combine [docu1,docu10,docu11,docu2,docu3,docu4,docu5,docu6,docu7,docu8,docu9,name5,pad1,pad2,pad3,pad4,pad5,pad6,silk1,silk2,silk3,silk4,h1,h2]
+  combine [docu1,docu10,docu11,docu2,docu3,docu4,docu5,docu6,docu7,docu8,docu9,name5,pad1,pad2,pad3,pad4,pad5,pad6,pad7, pad8, silk1,silk2,silk3,silk4]
