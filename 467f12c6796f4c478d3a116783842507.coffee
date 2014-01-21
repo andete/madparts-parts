@@ -41,7 +41,7 @@ footprint = () ->
   #h2 = mirror_x clone h1
 
   # replace hole by pads, works easier in kicad
-  pad7 = new RoundPad 1.4/2,1.1
+  pad7 = new RoundPad 1.1/2,1.1
   pad7.x = -0.1
   pad7.y = 2.25
   pad7.name = 'NC1'
