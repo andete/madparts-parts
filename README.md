@@ -102,6 +102,7 @@ e5e7f74142c84d16898358407581e425 WE_TPC_XMH
 7f9fa9f9194a41278b74e4eaede4d110 Wago 500 Screw Terminal 2 pin
 c82c2e1e5ff5451296bbd438e4f9129d relay TE V23079 THT standard bistable 2 coil
 3c55f908bf8743a9bf1072d471264637 relay aromat DSP2aE-L2-DC5V
+741d29eeeaa7438c90160b7e5192f731 spiratronics-DIN5-midi
 845ceb325a4141efa596fe9b184b63eb tag-connect-2x3
 ```
 
