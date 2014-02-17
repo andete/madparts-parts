@@ -4,6 +4,7 @@
 #parent e41d7b501d6448fa89d1b1c09d47b99f
 #desc aka DCT
 #desc aka JEDEC MO-187-DA
+#desc aka SOIC8
 
 make_rect = (dx, dy, line_width, type) ->
     x2 = dx/2
