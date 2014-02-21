@@ -80,6 +80,8 @@ f553f70aae2c4684bd7e9bcd278eb947 SO-5
 e917fb96f36749d6af1f1aff2d115b93 SOT-23A
 30aefb9954cf453b86d072e7a7793449 SOT-23A_larger_pads
 36fbee849c59496db8560db10fd5e692 SPC-FD05-3.5mm-stereo-phone-jack
+55f0244c2f234626b56f61d722fe3676 Sensirion-SHT2x
+d873e839c3aa4264921f7c7d8c4448fc Sensirion-SHT2x+SF2
 fb7a9f5f674645898b41bf402b7da3eb Solder Jumper 1.5mm
 3fe3a76e9d09496fa1dece0d3753daf0 Solder Jumper 1mm
 4d580407a00a4502871437d39d3a2163 Solder Jumper 2mm
