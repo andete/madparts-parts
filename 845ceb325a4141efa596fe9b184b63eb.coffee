@@ -2,7 +2,7 @@
 #name tag-connect-2x3
 #id 845ceb325a4141efa596fe9b184b63eb
 #parent 8e209e4c771743e28d103d10dcf3717c
-#desc 2X3 pin pinheader
+#desc 2X3 tag-connect programming header
 footprint = () ->
 
   d = 1.27
