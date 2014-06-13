@@ -14,7 +14,6 @@ footprint = () ->
   smd1.dx = 1.5
   smd1.dy = 1.5
   l = rot_single [smd1], 2, 3.0
-  l[0].ro = 50
   l[0].name = '2'
   l[1].name = '1'
 
@@ -28,6 +27,6 @@ footprint = () ->
   line.y1 = 1-w
   line.y2 = -1+w
 
-  name = new Name 1.6
+  name = new Name 2
 
   combine [l, docu, name, silk, line]
