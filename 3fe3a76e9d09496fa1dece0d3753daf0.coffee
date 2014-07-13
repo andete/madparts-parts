@@ -16,9 +16,14 @@ footprint = () ->
 
   smd2 = mirror_y clone smd1
 
+  stop = new Rect
+  stop.dx = 0.3+0.2
+  stop.dy = dy
+  stop.type = 'stop'
+
   name = new Name dy+0.5
   value = new Value -dy-0.5
 
   s = make_rect 2*dx+between+0.3,dy+0.3,0.1,'silk'
 
-  combine [smd1, smd2, name, value, s]
+  combine [smd1, smd2, name, value, s, stop]
