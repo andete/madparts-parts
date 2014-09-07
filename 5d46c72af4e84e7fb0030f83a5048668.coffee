@@ -9,6 +9,10 @@ footprint = () ->
   # total size
   total_y = 7.4
 
+  # cutout
+  cutout_x = 4.6
+  cutout_y = total_y
+
   # 4 larger holes
   pad_r2 = 2.2/2
   drill_d2 = 1.5
@@ -37,10 +41,8 @@ footprint = () ->
   smd.dy = 0.4
   smd.x = 6.4-smd.dx/2
 
-  # confusingly, the pins are upside 
-  # down in the connector, meaning
-  # the pin order is reversed
-  smds = mirror_x single smd, 5, 1.3/2
+  # the pins are _not_ mirrored
+  smds = single smd, 5, 1.3/2
 
   smd2 = new Smd
   smd2.dx = 1.5
@@ -48,8 +50,8 @@ footprint = () ->
   smd2.x = smd.x
 
   extra_smd = single smd2, 2, 4.65
-  extra_smd[0].name = 6
-  extra_smd[1].name = 7
+  extra_smd[0].name = 7
+  extra_smd[1].name = 6
 
   name = new Name 8
 
@@ -88,8 +90,16 @@ footprint = () ->
   docu3.y2 = total_y/2
   docu3.type = 'docu'
 
+  edge1 = new Line 0.2
+  edge1.x1 = cutout_x
+  edge1.y1 = cutout_y/2
+  edge1.x2 = cutout_x
+  edge1.y2 = -cutout_y/2
+  edge1.type = 'docu'
+
   docu = [border, docu1,docu2,docu3]
   silk = [silk1,silk2,silk3,silk4]
+  edge = [edge1]
 
-  combine [docu,name,pads,smds, extra_smd, silk]
+  combine [docu,name,pads,smds, extra_smd, silk, edge1]
  
